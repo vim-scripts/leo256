@@ -1,6 +1,7 @@
 " Vim color file
-" Maintainer:	Lorenzo Leonini <vim-theme[a]leonini[.]net>, http://www.leonini.net
-" Last Change: 2008 Feb 10
+" Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
+" Last Change:	2008 Feb 17
+" URL:					http://www.leonini.net
 
 " Description:
 " A colored, contrasted theme for long programming sessions.
@@ -18,13 +19,11 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
 if has("gui_running")
-  echomsg ""
   echomsg "err: Not a GUI theme (only for 256-colors terminals)."
-  echomsg ""
+	echomsg ""
   finish
 else
 	if &t_Co != 256
-		echomsg ""
 		echomsg "err: Please use a 256-colors terminal (so that t_Co=256 could be set)."
 		echomsg ""
 		finish
@@ -42,51 +41,55 @@ if version > 580
 endif
 
 " Normal should come first
-hi Normal				cterm=NONE	ctermfg=White	ctermbg=Black
+hi Normal				cterm=none		ctermfg=15		ctermbg=0
 
-hi DiffAdd			cterm=NONE	ctermbg=17
-hi DiffChange		cterm=NONE	ctermbg=235
-hi DiffDelete		cterm=NONE	ctermbg=250
-hi DiffText			cterm=bold	ctermbg=88
-hi Directory		cterm=NONE	ctermfg=DarkBlue
-hi ErrorMsg			cterm=NONE	ctermfg=White		ctermbg=DarkRed
-hi FoldColumn		cterm=NONE	ctermfg=DarkBlue	ctermbg=Grey
-hi Folded				cterm=NONE	ctermfg=white			ctermbg=237
+hi CursorLine		cterm=none		ctermbg=233
+hi DiffAdd			cterm=none		ctermbg=235
+hi DiffChange		cterm=none		ctermbg=234
+hi DiffDelete		cterm=none		ctermfg=239		ctermbg=244
+hi DiffText			cterm=bold		ctermfg=15		ctermbg=196
+hi Directory		cterm=none		ctermfg=196
+hi ErrorMsg			cterm=none		ctermfg=15		ctermbg=1
+hi FoldColumn		cterm=none		ctermfg=40		ctermbg=248
+hi Folded				cterm=none		ctermfg=15		ctermbg=237
 hi IncSearch		cterm=reverse
-hi LineNr				cterm=NONE	ctermfg=250
+hi LineNr				cterm=none		ctermfg=250
 hi ModeMsg			cterm=bold
-hi MoreMsg			cterm=NONE	ctermfg=DarkGreen
-hi NonText			cterm=NONE	ctermfg=Blue
+hi MoreMsg			cterm=none		ctermfg=2
+hi NonText			cterm=none		ctermfg=12
 "hi Pmenu
-hi PmenuSel			cterm=NONE	ctermfg=White		ctermbg=DarkBlue
-hi Question			cterm=NONE	ctermfg=DarkGreen
-hi Search				cterm=NONE	ctermfg=NONE		ctermbg=Yellow
-hi SpecialKey		cterm=NONE	ctermfg=239
-hi StatusLine		cterm=NONE	ctermfg=White		ctermbg=DarkGrey
-hi StatusLineNC	cterm=NONE	ctermfg=Black		ctermbg=DarkGrey
-hi Title				cterm=NONE	ctermfg=DarkMagenta
-hi VertSplit		cterm=NONE	ctermfg=Red			ctermbg=White
-hi Visual				cterm=reverse	ctermbg=NONE
+hi PmenuSel			cterm=none		ctermfg=15		ctermbg=4
+hi Question			cterm=none		ctermfg=2
+hi Search				cterm=none		ctermfg=none	ctermbg=11
+hi SpecialKey		cterm=none		ctermfg=124
+hi StatusLine		cterm=none		ctermfg=0			ctermbg=252
+hi StatusLineNC	cterm=none		ctermfg=245		ctermbg=235
+hi Title				cterm=none		ctermfg=5
+hi VertSplit		cterm=none		ctermfg=233		ctermbg=233
+hi Visual				cterm=reverse								ctermbg=none
 hi VisualNOS		cterm=underline,bold
-hi WarningMsg		cterm=NONE	ctermfg=DarkRed
-hi WildMenu			cterm=NONE	ctermfg=Black	   ctermbg=Yellow
+hi WarningMsg		cterm=none		ctermfg=1
+hi WildMenu			cterm=none		ctermfg=0			ctermbg=11
 
 " syntax highlighting
-hi Boolean			cterm=NONE		ctermfg=134
-hi Character		cterm=NONE		ctermfg=184
-hi Comment			cterm=NONE		ctermfg=246
-hi Constant			cterm=NONE		ctermfg=Red
-hi Conditional	cterm=NONE		ctermfg=40
+hi Boolean			cterm=none		ctermfg=135
+hi Character		cterm=none		ctermfg=184
+hi Comment			cterm=none		ctermfg=246
+hi Constant			cterm=none		ctermfg=196
+hi Conditional	cterm=none		ctermfg=154
 hi Define				cterm=bold		ctermfg=63
-hi Delimiter		cterm=NONE		ctermfg=Red
+hi Delimiter		cterm=none		ctermfg=196
 hi Exception		cterm=bold		ctermfg=226
-hi Keyword			cterm=NONE		ctermfg=Yellow
-hi Float				cterm=NONE		ctermfg=203
-hi Function			cterm=NONE		ctermfg=81
-hi Identifier		cterm=NONE		ctermfg=69
-hi Operator			cterm=NONE		ctermfg=Yellow
+hi Error				cterm=none		ctermfg=15		ctermbg=9
+hi Keyword			cterm=none		ctermfg=11
+"hi Float				cterm=none		ctermfg=208
+hi Function			cterm=none		ctermfg=75
+hi Identifier		cterm=none		ctermfg=27
+hi Number				cterm=bold		ctermfg=135
+hi Operator			cterm=none		ctermfg=11
 hi PreProc			cterm=bold		ctermfg=178
-hi Special			cterm=NONE		ctermfg=206
-hi Statement		cterm=NONE		ctermfg=154
-hi String				cterm=NONE		ctermfg=224		ctermbg=234
+hi Special			cterm=none		ctermfg=206		ctermbg=234
+hi Statement		cterm=none		ctermfg=2
+hi String				cterm=none		ctermfg=224		ctermbg=234
+hi Todo         cterm=none		ctermfg=0			ctermbg=11
 hi Type					cterm=bold		ctermfg=75

@@ -81,13 +81,13 @@ hi Define				cterm=bold		ctermfg=63
 hi Delimiter		cterm=none		ctermfg=196
 hi Exception		cterm=bold		ctermfg=226
 hi Error				cterm=none		ctermfg=15		ctermbg=9
-hi Keyword			cterm=none		ctermfg=11
+hi Keyword			cterm=none		ctermfg=202
 "hi Float				cterm=none		ctermfg=208
 hi Function			cterm=none		ctermfg=75
 hi Identifier		cterm=none		ctermfg=27
-hi Number				cterm=bold		ctermfg=135
+hi Number				cterm=none		ctermfg=135
 hi Operator			cterm=none		ctermfg=11
-hi PreProc			cterm=bold		ctermfg=178
+hi PreProc			cterm=none		ctermfg=178
 hi Special			cterm=none		ctermfg=206		ctermbg=234
 hi Statement		cterm=none		ctermfg=2
 hi String				cterm=none		ctermfg=224		ctermbg=234

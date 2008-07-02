@@ -1,6 +1,6 @@
 " Vim color file
-" Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
-" Last Change:	2008 Feb 17
+" Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[o]net>
+" Last Change:	2008 Jul 2
 " URL:					http://www.leonini.net
 
 " Description:
@@ -57,7 +57,6 @@ hi LineNr				cterm=none		ctermfg=250
 hi ModeMsg			cterm=bold
 hi MoreMsg			cterm=none		ctermfg=2
 hi NonText			cterm=none		ctermfg=12
-"hi Pmenu
 hi PmenuSel			cterm=none		ctermfg=15		ctermbg=4
 hi Question			cterm=none		ctermfg=2
 hi Search				cterm=none		ctermfg=none	ctermbg=11
@@ -71,19 +70,17 @@ hi VisualNOS		cterm=underline,bold
 hi WarningMsg		cterm=none		ctermfg=1
 hi WildMenu			cterm=none		ctermfg=0			ctermbg=11
 
-" syntax highlighting
 hi Boolean			cterm=none		ctermfg=135
 hi Character		cterm=none		ctermfg=184
 hi Comment			cterm=none		ctermfg=246
-hi Constant			cterm=none		ctermfg=196
+hi Constant			cterm=none		ctermfg=yellow
 hi Conditional	cterm=none		ctermfg=154
-hi Define				cterm=bold		ctermfg=63
+hi Define				cterm=bold		ctermfg=27
 hi Delimiter		cterm=none		ctermfg=196
 hi Exception		cterm=bold		ctermfg=226
 hi Error				cterm=none		ctermfg=15		ctermbg=9
-hi Keyword			cterm=none		ctermfg=202
-"hi Float				cterm=none		ctermfg=208
-hi Function			cterm=none		ctermfg=75
+hi Keyword			cterm=none		ctermfg=red
+hi Function			cterm=none		ctermfg=202
 hi Identifier		cterm=none		ctermfg=27
 hi Number				cterm=none		ctermfg=135
 hi Operator			cterm=none		ctermfg=11
@@ -92,4 +89,4 @@ hi Special			cterm=none		ctermfg=206		ctermbg=234
 hi Statement		cterm=none		ctermfg=2
 hi String				cterm=none		ctermfg=224		ctermbg=234
 hi Todo         cterm=none		ctermfg=0			ctermbg=11
-hi Type					cterm=bold		ctermfg=75
+hi Type					cterm=none		ctermfg=75

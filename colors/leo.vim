@@ -28,7 +28,7 @@ endif
 let g:colors_name = "leo256"
 
 set background=dark
-if version > 580
+if v:version > 580
 	highlight clear
 	if exists("syntax_on")
 		syntax reset
@@ -52,7 +52,6 @@ hi LineNr				cterm=none		ctermfg=250
 hi ModeMsg			cterm=bold
 hi MoreMsg			cterm=none		ctermfg=2
 hi NonText			cterm=none		ctermfg=12
-hi PmenuSel			cterm=none		ctermfg=15		ctermbg=4
 hi Question			cterm=none		ctermfg=2
 hi Search				cterm=none		ctermfg=none	ctermbg=11
 hi SpecialKey		cterm=none		ctermfg=124
@@ -64,6 +63,16 @@ hi Visual				cterm=reverse								ctermbg=none
 hi VisualNOS		cterm=underline,bold
 hi WarningMsg		cterm=none		ctermfg=1
 hi WildMenu			cterm=none		ctermfg=0			ctermbg=11
+
+if v:version >= 700
+	hi Pmenu				cterm=none	ctermfg=255		ctermbg=235		guibg=#222222		guifg=#eeeeee
+	hi PmenuSel			cterm=none	ctermfg=255		ctermbg=4			guibg=#3333ff
+	hi PmenuSbar		cterm=none	ctermfg=240		ctermbg=240		guibg=#444444
+  hi PmenuThumb		cterm=none	ctermfg=255		ctermbg=255
+	hi TabLine			cterm=none	ctermfg=252		ctermbg=17
+	hi TabLineSel		cterm=none	ctermfg=255		ctermbg=20
+	hi TabLineFill	cterm=none	ctermfg=16		ctermbg=16
+endif
 
 hi Boolean			cterm=none		ctermfg=135		guifg=#af5fff
 hi Character		cterm=none		ctermfg=184

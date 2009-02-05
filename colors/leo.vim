@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
-" Last Change:	2008 Aug 13
+" Last Change:	2009 Feb 23
 " URL:					http://www.leonini.net
 
 " Description:
@@ -17,6 +17,12 @@
 " Color numbers (0-255) see:
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
+" 0.6 => 0.8
+" GUI fixed, color < 16 fixed
+" comments from 247 => 249
+" main color 255 => 254
+" boolean, number more visible
+"
 " 0.5 => 0.6
 " Synchro with GUI
 
@@ -49,8 +55,8 @@ if v:version > 580
 endif
 
 " Normal should come first
-hi Normal				cterm=none		ctermfg=255		ctermbg=16		guibg=#000000 guifg=#ffffff
-hi CursorLine		cterm=none		ctermbg=16		guibg=#000000
+hi Normal				cterm=none		ctermfg=254		ctermbg=16 guibg=#000000 guifg=#ffffff
+hi CursorLine		cterm=none		ctermbg=16		guibg=#101010
 hi DiffAdd			cterm=none		ctermbg=235		guibg=#262626
 hi DiffChange		cterm=none		ctermbg=235		guibg=#262626
 hi DiffDelete		cterm=none		ctermfg=238		ctermbg=244		guibg=#808080	guifg=#444444
@@ -62,6 +68,7 @@ hi SignColumn		cterm=none		ctermbg=16		guibg=#000000
 hi Folded				cterm=none		ctermfg=16		ctermbg=110		guifg=#000000	guibg=#87afd7
 hi IncSearch		cterm=reverse
 hi LineNr				cterm=none		ctermfg=124		guifg=#af0000
+hi ModeMsg			cterm=bold
 hi MoreMsg			cterm=none		ctermfg=40
 hi NonText			cterm=none		ctermfg=27
 hi Question			cterm=none		ctermfg=40
@@ -101,26 +108,26 @@ if v:version >= 700
 endif
 
 " syntax highlighting
-hi Boolean			cterm=none		ctermfg=135		guifg=#af5fff
+hi Boolean			cterm=none		ctermfg=171		guifg=#d75fff
 hi Character		cterm=none		ctermfg=184
-hi Comment			cterm=none		ctermfg=247		guifg=#A5A5A5
+hi Comment			cterm=none		ctermfg=248		guifg=#a8a8a8
 hi Constant			cterm=none		ctermfg=226		guifg=#ffff00
 hi Conditional	cterm=none		ctermfg=154		guifg=#afff00
-hi Define				cterm=bold		ctermfg=27		guifg=#005fff
-hi Delimiter		cterm=none		ctermfg=196		guifg=#af0000
-hi Exception		cterm=bold		ctermfg=226		guifg=#ffff00
+hi Define				cterm=bold		ctermfg=27		gui=bold			guifg=#005fff
+hi Delimiter		cterm=none		ctermfg=196		guifg=#ff0000
+hi Exception		cterm=bold		ctermfg=226		gui=bold			guifg=#ffff00
 hi Error				cterm=none		ctermfg=255		ctermbg=9			guifg=#ffffff
-hi Keyword			cterm=none		ctermfg=159		guifg=#d7af00
-hi Function			cterm=none		ctermfg=red		guifg=#ff0000
-hi Identifier		cterm=none		ctermfg=27		guifg=#005fff
-hi Number				cterm=none		ctermfg=135		guifg=#af5fff
+hi Keyword			cterm=none		ctermfg=159		guifg=#afffff
+hi Function			cterm=none		ctermfg=196		guifg=#ff0000
+hi Identifier		cterm=none		ctermfg=33		guifg=#0087ff
+hi Number				cterm=none		ctermfg=209		guifg=##ff875f
 hi Operator			cterm=none		ctermfg=11
 hi PreProc			cterm=none		ctermfg=202		guifg=#ff5f00
-hi Special			cterm=none		ctermfg=206		ctermbg=234		guifg=#ff5fd7
-hi Statement		cterm=none		ctermfg=2			guifg=#00cd00
+hi Special			cterm=none		ctermfg=206		ctermbg=234		guifg=#ff5fd7 guibg=#1c1c1c
+hi Statement		cterm=none		ctermfg=40		guifg=#00d700
 hi String				cterm=none		ctermfg=224		ctermbg=234		guifg=#ffd7d7	guibg=#1c1c1c
-hi Todo         cterm=none		ctermfg=0			ctermbg=11		guifg=#000000 guibg=#ffff00
+hi Todo         cterm=none    ctermfg=16		ctermbg=226	guifg=#000000 guibg=#ffff00
 hi Type					cterm=none		ctermfg=75		guifg=#5fafff
 
 " ADDITIONNAL
-hi Repeat		cterm=none		ctermfg=142		guifg=#878700
+hi Repeat		cterm=none		ctermfg=142		guifg=#afaf00

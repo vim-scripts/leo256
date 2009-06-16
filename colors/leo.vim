@@ -19,10 +19,15 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
+" 0.82 => 0.9
+" more blue (blue <=> green swap)
+" lot of changes, some may prefer previous version
+"
 " 0.81 => 0.82
 " menu backgrounf lighter
 " LineNr
 " gui comments in italic
+" remove some default bold in gui
 "
 " 0.8 => 0.81
 " invisible char
@@ -69,7 +74,7 @@ if v:version > 580
 endif
 
 " Normal should come first
-hi Normal				cterm=none		ctermfg=255		ctermbg=16 guibg=#000000 guifg=#ffffff
+hi Normal				cterm=none		ctermfg=255		ctermbg=232 guibg=#080808	guifg=#ffffff
 hi CursorLine		cterm=none		ctermbg=16		guibg=#101010
 hi DiffAdd			cterm=none		ctermbg=235		guibg=#262626
 hi DiffChange		cterm=none		ctermbg=235		guibg=#262626
@@ -105,7 +110,7 @@ if v:version >= 700
   "hi PmenuThumb		cterm=none	ctermfg=255		ctermbg=255
 
 	"dark
-	hi Pmenu				cterm=none		ctermfg=255		ctermbg=237		guibg=#262626		guifg=#ffffff
+	hi Pmenu				cterm=none		ctermfg=255		ctermbg=235		guibg=#262626		guifg=#ffffff
 	hi PmenuSel			cterm=none		ctermfg=255		ctermbg=21		guibg=#0000ff		guifg=#ffffff
 	hi PmenuSbar		cterm=none		ctermfg=240		ctermbg=240		guibg=#444444
   hi PmenuThumb		cterm=none		ctermfg=255		ctermbg=255		guifg=#ffffff
@@ -124,27 +129,28 @@ if v:version >= 700
 endif
 
 " syntax highlighting
-hi Boolean			cterm=none		ctermfg=171		guifg=#d75fff
-hi Character		cterm=none		ctermfg=184
+hi Boolean			cterm=none		ctermfg=215		guifg=#ffaf5f
+hi Character		cterm=none		ctermfg=184		guifg=#d7d700
 hi Comment			cterm=none		ctermfg=248		gui=italic		guifg=#a8a8a8
+hi Conditional	cterm=none		ctermfg=33		guifg=#0087ff
 hi Constant			cterm=none		ctermfg=226		guifg=#ffff00
-hi Conditional	cterm=none		ctermfg=154		guifg=#afff00
 hi Define				cterm=bold		ctermfg=27		gui=bold			guifg=#005fff
 hi Delimiter		cterm=none		ctermfg=196		guifg=#ff0000
-hi Exception		cterm=bold		ctermfg=226		gui=bold			guifg=#ffff00
 hi Error				cterm=none		ctermfg=255		ctermbg=9			guifg=#ffffff
-hi Keyword			cterm=none		ctermfg=159		guifg=#afffff
+hi Exception		cterm=bold		ctermfg=226		gui=bold			guifg=#ffff00
 hi Function			cterm=none		ctermfg=196		guifg=#ff0000
-hi Identifier		cterm=none		ctermfg=33		guifg=#0087ff
+hi Identifier		cterm=none		ctermfg=40		gui=none			guifg=#00d700
+hi Keyword			cterm=none		ctermfg=123		guifg=#87ffff
 hi Number				cterm=none		ctermfg=209		guifg=#ff875f
 hi Operator			cterm=none		ctermfg=226		guifg=#ffff00
 hi PreProc			cterm=none		ctermfg=202		guifg=#ff5f00
 hi Special			cterm=none		ctermfg=206		ctermbg=234		guifg=#ff5fd7 guibg=#1c1c1c
-hi Statement		cterm=none		ctermfg=40		gui=none			guifg=#00d700
-hi String				cterm=none		ctermfg=224		ctermbg=234		guifg=#ffd7d7	guibg=#1c1c1c
+hi Statement		cterm=none		ctermfg=171		gui=none			guifg=#d75fff
+hi String				cterm=none		ctermfg=180		ctermbg=234		guifg=#d7af87	guibg=#1c1c1c
 hi Todo					cterm=none		ctermfg=16		ctermbg=226		guifg=#000000 guibg=#ffff00
 hi Type					cterm=none		ctermfg=75		gui=none			guifg=#5fafff
 hi Underlined		cterm=underline	ctermfg=39	gui=underline	guifg=#00afff
 
 " ADDITIONNAL
-hi Repeat		cterm=none		ctermfg=142		guifg=#afaf00
+hi Repeat		cterm=none		ctermfg=99				guifg=#875fff
+

@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
-" Last Change:	2009 Feb 23
+" Last Change:	2010 Mar 3
 " URL:					http://www.leonini.net
 
 " Description:
@@ -19,6 +19,9 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
+" 0.9 => 0.91
+" fixed cursor color with MatchParen
+"
 " 0.82 => 0.9
 " more blue (blue <=> green swap)
 " lot of changes, some may prefer previous version
@@ -75,6 +78,7 @@ endif
 
 " Normal should come first
 hi Normal				cterm=none		ctermfg=255		ctermbg=232 guibg=#080808	guifg=#ffffff
+hi Cursor				cterm=none		ctermfg=bg		ctermbg=fg	guibg=fg	guifg=bg
 hi CursorLine		cterm=none		ctermbg=16		guibg=#101010
 hi DiffAdd			cterm=none		ctermbg=235		guibg=#262626
 hi DiffChange		cterm=none		ctermbg=235		guibg=#262626
@@ -103,6 +107,8 @@ hi WarningMsg		cterm=none		ctermfg=255		guifg=#ffffff
 hi WildMenu			cterm=none		ctermfg=16		ctermbg=11
 
 if v:version >= 700
+	hi MatchParen		cterm=none		ctermfg=196		ctermbg=232		guifg=#ff0000	guibg=#080808
+
 	" light
 	"hi Pmenu				cterm=none	ctermfg=16		ctermbg=252
 	"hi PmenuSel			cterm=none	ctermfg=255		ctermbg=21
@@ -124,8 +130,6 @@ if v:version >= 700
 	hi TabLine			cterm=none	ctermfg=252		ctermbg=17
 	hi TabLineSel		cterm=none	ctermfg=255		ctermbg=21
 	hi TabLineFill	cterm=none	ctermfg=17		ctermbg=17
-
-	hi MatchParen		cterm=none	ctermfg=16		ctermbg=226		guibg=#ffff00   guifg=#000000
 endif
 
 " syntax highlighting
@@ -146,6 +150,7 @@ hi Operator			cterm=none		ctermfg=226		guifg=#ffff00
 hi PreProc			cterm=none		ctermfg=202		guifg=#ff5f00
 hi Special			cterm=none		ctermfg=206		ctermbg=234		guifg=#ff5fd7 guibg=#1c1c1c
 hi Statement		cterm=none		ctermfg=171		gui=none			guifg=#d75fff
+"hi String				cterm=none		ctermfg=224		ctermbg=234		guifg=#ffd7d7	guibg=#1c1c1c
 hi String				cterm=none		ctermfg=180		ctermbg=234		guifg=#d7af87	guibg=#1c1c1c
 hi Todo					cterm=none		ctermfg=16		ctermbg=226		guifg=#000000 guibg=#ffff00
 hi Type					cterm=none		ctermfg=75		gui=none			guifg=#5fafff

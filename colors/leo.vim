@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
-" Last Change:	2010 Mar 3
+" Last Change:	2010 Mar 8
 " URL:					http://www.leonini.net
 
 " Description:
@@ -19,8 +19,13 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
+" 0.91 => 0.92
+" Fixed visual in GUI mode
+" Dark line numbers
+"
 " 0.9 => 0.91
 " fixed cursor color with MatchParen
+"
 "
 " 0.82 => 0.9
 " more blue (blue <=> green swap)
@@ -77,12 +82,12 @@ if v:version > 580
 endif
 
 " Normal should come first
-hi Normal				cterm=none		ctermfg=255		ctermbg=232 guibg=#080808	guifg=#ffffff
+hi Normal				cterm=none		ctermfg=255		ctermbg=232 guifg=#ffffff	guibg=#080808
 hi Cursor				cterm=none		ctermfg=bg		ctermbg=fg	guibg=fg	guifg=bg
 hi CursorLine		cterm=none		ctermbg=16		guibg=#101010
 hi DiffAdd			cterm=none		ctermbg=235		guibg=#262626
 hi DiffChange		cterm=none		ctermbg=235		guibg=#262626
-hi DiffDelete		cterm=none		ctermfg=238		ctermbg=244		guibg=#808080	guifg=#444444
+hi DiffDelete		cterm=none		ctermfg=238		ctermbg=244		guifg=#444444	guibg=#808080
 hi DiffText			cterm=bold		ctermfg=255		ctermbg=196		guifg=#ffffff
 hi Directory		cterm=none		ctermfg=196
 hi ErrorMsg			cterm=none		ctermfg=255		ctermbg=160		guifg=#ffffff
@@ -90,24 +95,26 @@ hi FoldColumn		cterm=none		ctermfg=110		ctermbg=16		guibg=#000000
 hi SignColumn		cterm=none		ctermbg=16		guibg=#000000
 hi Folded				cterm=none		ctermfg=16		ctermbg=110		guifg=#000000	guibg=#87afd7
 hi IncSearch		cterm=reverse
-hi LineNr				cterm=none		ctermfg=228		ctermbg=16		guifg=#ffff87	guibg=#000000
+"hi LineNr				cterm=none		ctermfg=229		ctermbg=16		guifg=#ffff87	guibg=#000000
+"hi LineNr				cterm=none		ctermfg=27		ctermbg=16		guifg=#005fff	guibg=#000000
+hi LineNr				cterm=none		ctermfg=239		ctermbg=16		guifg=#005fff	guibg=#000000
 hi ModeMsg			cterm=bold
 hi MoreMsg			cterm=none		ctermfg=40
-hi NonText			cterm=none		ctermfg=27
+hi NonText			cterm=none		ctermfg=21
 hi Question			cterm=none		ctermfg=40
 hi Search				cterm=none		ctermfg=16		ctermbg=248		guifg=#000000	guibg=#a8a8a8
 hi SpecialKey		cterm=none		ctermfg=245		ctermbg=233		guifg=#8a8a8a	guibg=#121212
 hi StatusLine		cterm=bold		ctermfg=255		ctermbg=19		guifg=#0000ff	guibg=#ffffff
-hi StatusLineNC	cterm=none		ctermfg=252		ctermbg=17		guibg=#d0d0d0 guifg=#00005f
+hi StatusLineNC	cterm=none		ctermfg=252		ctermbg=17		guifg=#00005f guibg=#d0d0d0
 hi Title				cterm=none		ctermfg=33
-hi VertSplit		cterm=none		ctermfg=254		ctermbg=16		guibg=#EEEEEE guifg=#000000
-hi Visual				cterm=reverse	ctermbg=none
+hi VertSplit		cterm=none		ctermfg=254		ctermbg=16		guifg=#000000 guibg=#eeeeee
+hi Visual				cterm=reverse	ctermbg=none								gui=reverse		guibg=#080808
 hi VisualNOS		cterm=underline,bold
 hi WarningMsg		cterm=none		ctermfg=255		guifg=#ffffff
 hi WildMenu			cterm=none		ctermfg=16		ctermbg=11
 
 if v:version >= 700
-	hi MatchParen		cterm=none		ctermfg=196		ctermbg=232		guifg=#ff0000	guibg=#080808
+	hi MatchParen		cterm=none		ctermfg=190		ctermbg=20		guifg=#d7ff00	guibg=#0000d7
 
 	" light
 	"hi Pmenu				cterm=none	ctermfg=16		ctermbg=252
@@ -116,17 +123,18 @@ if v:version >= 700
   "hi PmenuThumb		cterm=none	ctermfg=255		ctermbg=255
 
 	"dark
-	hi Pmenu				cterm=none		ctermfg=255		ctermbg=235		guibg=#262626		guifg=#ffffff
-	hi PmenuSel			cterm=none		ctermfg=255		ctermbg=21		guibg=#0000ff		guifg=#ffffff
+	hi Pmenu				cterm=none		ctermfg=255		ctermbg=235		guifg=#ffffff		guibg=#262626
+	hi PmenuSel			cterm=none		ctermfg=255		ctermbg=21		guifg=#ffffff		guibg=#0000ff
 	hi PmenuSbar		cterm=none		ctermfg=240		ctermbg=240		guibg=#444444
   hi PmenuThumb		cterm=none		ctermfg=255		ctermbg=255		guifg=#ffffff
 
+	" No need for GUI colors
 	hi SpellBad			cterm=none    ctermfg=16		ctermbg=196
 	hi SpellCap			cterm=none    ctermfg=16		ctermbg=196
 	hi SpellLocal		cterm=none    ctermfg=16		ctermbg=196
 	hi SpellRare		cterm=none    ctermfg=16		ctermbg=196
 	
-	" No need for GUI colors :)
+	" No need for GUI colors
 	hi TabLine			cterm=none	ctermfg=252		ctermbg=17
 	hi TabLineSel		cterm=none	ctermfg=255		ctermbg=21
 	hi TabLineFill	cterm=none	ctermfg=17		ctermbg=17

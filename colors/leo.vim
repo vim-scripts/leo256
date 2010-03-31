@@ -19,41 +19,43 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
-" 0.91 => 0.92
+" 0.93
+" Console and GUI are deliberately differents.
+"
+" 0.92
 " Fixed visual in GUI mode
 " Dark line numbers
 "
-" 0.9 => 0.91
+" 0.91
 " fixed cursor color with MatchParen
 "
-"
-" 0.82 => 0.9
+" 0.9
 " more blue (blue <=> green swap)
 " lot of changes, some may prefer previous version
 "
-" 0.81 => 0.82
+" 0.82
 " menu backgrounf lighter
 " LineNr
 " gui comments in italic
 " remove some default bold in gui
 "
-" 0.8 => 0.81
+" 0.81
 " invisible char
 " line number
 " status bar
 " add MatchParen
 " add Underlined
 "
-" 0.6 => 0.8
+" 0.8
 " GUI fixed, color < 16 fixed
 " comments from 247 => 249
 " main color 255 => 254
 " boolean and numbers more visible
 "
-" 0.5 => 0.6
+" 0.6
 " Synchro with GUI
 
-" 0.3 => 0.5
+" 0.5
 " Ligther vertical separation
 " Better diff
 " Better pmenu
@@ -81,10 +83,15 @@ if v:version > 580
 	endif
 endif
 
-" Normal should come first
-hi Normal				cterm=none		ctermfg=255		ctermbg=232 guifg=#ffffff	guibg=#080808
+" ### Normal should come first
+
+" console-gui different
+hi Normal				cterm=none		ctermfg=255		ctermbg=232 guifg=#ffffff	guibg=#121212
+hi CursorLine		cterm=none		ctermbg=16		guibg=#050505
+hi SpecialKey		cterm=none		ctermfg=245		ctermbg=233		guifg=#8a8a8a	guibg=#090909
+
+
 hi Cursor				cterm=none		ctermfg=bg		ctermbg=fg	guibg=fg	guifg=bg
-hi CursorLine		cterm=none		ctermbg=16		guibg=#101010
 hi DiffAdd			cterm=none		ctermbg=235		guibg=#262626
 hi DiffChange		cterm=none		ctermbg=235		guibg=#262626
 hi DiffDelete		cterm=none		ctermfg=238		ctermbg=244		guifg=#444444	guibg=#808080
@@ -97,14 +104,13 @@ hi Folded				cterm=none		ctermfg=16		ctermbg=110		guifg=#000000	guibg=#87afd7
 hi IncSearch		cterm=reverse
 "hi LineNr				cterm=none		ctermfg=229		ctermbg=16		guifg=#ffff87	guibg=#000000
 "hi LineNr				cterm=none		ctermfg=27		ctermbg=16		guifg=#005fff	guibg=#000000
-hi LineNr				cterm=none		ctermfg=239		ctermbg=16		guifg=#005fff	guibg=#000000
+hi LineNr				cterm=none		ctermfg=239		ctermbg=16		guifg=#4e4e4e	guibg=#000000
 hi ModeMsg			cterm=bold
 hi MoreMsg			cterm=none		ctermfg=40
 hi NonText			cterm=none		ctermfg=21
 hi Question			cterm=none		ctermfg=40
 hi Search				cterm=none		ctermfg=16		ctermbg=248		guifg=#000000	guibg=#a8a8a8
-hi SpecialKey		cterm=none		ctermfg=245		ctermbg=233		guifg=#8a8a8a	guibg=#121212
-hi StatusLine		cterm=bold		ctermfg=255		ctermbg=19		guifg=#0000ff	guibg=#ffffff
+hi StatusLine		cterm=bold		ctermfg=255		ctermbg=19		guifg=#0000af	guibg=#ffffff
 hi StatusLineNC	cterm=none		ctermfg=252		ctermbg=17		guifg=#00005f guibg=#d0d0d0
 hi Title				cterm=none		ctermfg=33
 hi VertSplit		cterm=none		ctermfg=254		ctermbg=16		guifg=#000000 guibg=#eeeeee
@@ -140,7 +146,8 @@ if v:version >= 700
 	hi TabLineFill	cterm=none	ctermfg=17		ctermbg=17
 endif
 
-" syntax highlighting
+" ### syntax highlighting
+
 hi Boolean			cterm=none		ctermfg=215		guifg=#ffaf5f
 hi Character		cterm=none		ctermfg=184		guifg=#d7d700
 hi Comment			cterm=none		ctermfg=248		gui=italic		guifg=#a8a8a8

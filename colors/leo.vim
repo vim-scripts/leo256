@@ -19,6 +19,9 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
+" 0.94
+" Folding
+"
 " 0.93
 " Console and GUI are deliberately differents.
 "
@@ -89,6 +92,7 @@ endif
 hi Normal				cterm=none		ctermfg=255		ctermbg=232 guifg=#ffffff	guibg=#121212
 hi CursorLine		cterm=none		ctermbg=16		guibg=#050505
 hi SpecialKey		cterm=none		ctermfg=245		ctermbg=233		guifg=#8a8a8a	guibg=#090909
+hi Folded				cterm=none		ctermfg=110		ctermbg=233		guifg=#87afd7	guibg=#000000
 
 
 hi Cursor				cterm=none		ctermfg=bg		ctermbg=fg	guibg=fg	guifg=bg
@@ -98,9 +102,7 @@ hi DiffDelete		cterm=none		ctermfg=238		ctermbg=244		guifg=#444444	guibg=#808080
 hi DiffText			cterm=bold		ctermfg=255		ctermbg=196		guifg=#ffffff
 hi Directory		cterm=none		ctermfg=196
 hi ErrorMsg			cterm=none		ctermfg=255		ctermbg=160		guifg=#ffffff
-hi FoldColumn		cterm=none		ctermfg=110		ctermbg=16		guibg=#000000
-hi SignColumn		cterm=none		ctermbg=16		guibg=#000000
-hi Folded				cterm=none		ctermfg=16		ctermbg=110		guifg=#000000	guibg=#87afd7
+hi FoldColumn		cterm=none		ctermfg=110		ctermbg=16		guifg=#87afd7 guibg=#000000
 hi IncSearch		cterm=reverse
 "hi LineNr				cterm=none		ctermfg=229		ctermbg=16		guifg=#ffff87	guibg=#000000
 "hi LineNr				cterm=none		ctermfg=27		ctermbg=16		guifg=#005fff	guibg=#000000
@@ -110,6 +112,7 @@ hi MoreMsg			cterm=none		ctermfg=40
 hi NonText			cterm=none		ctermfg=21
 hi Question			cterm=none		ctermfg=40
 hi Search				cterm=none		ctermfg=16		ctermbg=248		guifg=#000000	guibg=#a8a8a8
+hi SignColumn		cterm=none		ctermbg=16		guibg=#000000
 hi StatusLine		cterm=bold		ctermfg=255		ctermbg=19		guifg=#0000af	guibg=#ffffff
 hi StatusLineNC	cterm=none		ctermfg=252		ctermbg=17		guifg=#00005f guibg=#d0d0d0
 hi Title				cterm=none		ctermfg=33

@@ -1,6 +1,6 @@
 " Vim color file
 " Maintainer:		Lorenzo Leonini <vim-theme[a]leonini[.]net>
-" Last Change:	2010 Mar 8
+" Last Change:	2010 Nov 20
 " URL:					http://www.leonini.net
 
 " Description:
@@ -19,6 +19,10 @@
 "		http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 "	:so $VIMRUNTIME/syntax/hitest.vim
 
+" 1.00
+" Tab colors
+" Vim 7.3 addition
+"
 " 0.94
 " Folding
 "
@@ -144,9 +148,17 @@ if v:version >= 700
 	hi SpellRare		cterm=none    ctermfg=16		ctermbg=196
 	
 	" No need for GUI colors
-	hi TabLine			cterm=none	ctermfg=252		ctermbg=17
-	hi TabLineSel		cterm=none	ctermfg=255		ctermbg=21
-	hi TabLineFill	cterm=none	ctermfg=17		ctermbg=17
+	"hi TabLine			cterm=none	ctermfg=252		ctermbg=17
+	"hi TabLineSel		cterm=none	ctermfg=255		ctermbg=21
+	"hi TabLineFill	cterm=none	ctermfg=17		ctermbg=17
+	hi TabLine			cterm=none	ctermfg=233		ctermbg=110
+	hi TabLineSel		cterm=none	ctermfg=110		ctermbg=233
+	hi TabLineFill	cterm=none	ctermfg=233		ctermbg=110
+
+endif
+
+if v:version >= 703
+	hi ColorColumn	cterm=none	ctermfg=250		ctermbg=234
 endif
 
 " ### syntax highlighting
